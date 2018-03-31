@@ -408,7 +408,7 @@ class WPSEO_Sitemaps {
 					continue;
 				}
 
-				$n = ( $count > $this->max_entries ) ? (int) ceil( $count / $this->max_entries ) : 1;
+				$n = ( ( $this->max_entries > 0 ) && ( $count > $this->max_entries ) ) ? (int) ceil( $count / $this->max_entries ) : 1;
 				for ( $i = 0; $i < $n; $i ++ ) {
 					$count = ( $n > 1 ) ? ( $i + 1 ) : '';
 
